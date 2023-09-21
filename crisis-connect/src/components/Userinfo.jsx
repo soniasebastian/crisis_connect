@@ -1,12 +1,12 @@
 export default function UserInfo () {
     return ( 
         <div className="userInfo">
-            <div ClassName= "userBox">
-            <h1>User Info</h1>
-            <h2> Name: Maria </h2>
-            <h2>Address : </h2>
-            <h2>Phone Number: </h2>
-            </div>
+            <section ClassName= "userBox">
+                    <h2>User Info</h2>
+                    <p> Name: Maria </p>
+                    <p>Address : 150 Eglinton Avenue East, Toronto, ON </p>
+                    <p>Phone Number: 123456789 </p>
+            </section>
         </div>
     )
 
