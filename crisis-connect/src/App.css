@@ -46,7 +46,11 @@ body{
   color: white;
   border: none;
 }
-
+/* authForm */
+.auth-form-container {
+  display: flex;
+  flex-direction: column;
+}
 
 /* userInfo page */
 .userInfo {
@@ -77,10 +81,8 @@ section{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color:#3e614b
 }
+
 .userInfo h2{
   display: flex;
   justify-content: center;
 }
-
-
-
