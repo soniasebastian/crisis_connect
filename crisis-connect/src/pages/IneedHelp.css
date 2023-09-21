@@ -1,0 +1,45 @@
+/* Style the navigation bar */
+.navbar-container {
+    text-align: center;
+}
+
+.nav {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    background-color: #333;
+}
+
+.nav li {
+    margin-right: 20px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav li.active {
+    background-color: #555;
+}
+
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.checkbox-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the selected options list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
