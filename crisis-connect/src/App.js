@@ -1,4 +1,4 @@
-import Home from './components/HomePage';
+
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
 import Header from './components/Header';
@@ -11,11 +11,8 @@ function App() {
     return (
         <div className="App">
             <Header/>
-            <Home/>
-            <userInfo/>
-
             <Routes>
-                <Route path='/' element={<Home/>}/>
+                <Route path='/' element={<Landing/>}/>
                 <Route path='/userInfo' element={<UserInfo/>}/>
                 <Route path='/ineedhelp' element={<IneedHelp/>}/>
                 <Route path='/icanhelp' element={<IcanHelp/>}/>
@@ -24,5 +21,4 @@ function App() {
         </div>
     );
 }
-
 export default App;
