@@ -1,10 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import axios from "axios";
 import "./IcanHelp.css";
 
-const containerStyle = {
-    lat: null,
-    lng: null,
+const getStreetNameFromCoordinates = async (lat, lng, AIzaSyDWGVK2rNh4jyBbR8lsFbrfYqymI84Kzt0) => {
+    try {
+        const response = await axios.get(
+            `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${AIzaSyDWGVK2rNh4jyBbR8lsFbrfYqymI84Kzt0}`
+        );
+
+        if (response.data.results.length > 0) {
+            // Extract the formatted address, which contains the street name
+            const address = response.data.results[0].formatted_address;
+            return address;
+        } else {
+            return "Address not found";
+        }
+    } catch (error) {
+        console.error("Error fetching address:", error);
+        return "Error fetching address";
+    }
 };
 
 
@@ -16,6 +31,7 @@ function IcanHelp() {
     })
 
     const [map, setMap] = React.useState(null);
+    const [inputValue, setInputValue] = useState("");
 
     useEffect(() => {
         // Use the Geolocation API to get the user's current location
@@ -35,7 +51,18 @@ function IcanHelp() {
         } else {
             console.error("Geolocation is not supported by this browser.");
         }
-    }, []);
+
+        if (currentLocation) {
+            getStreetNameFromCoordinates(
+                currentLocation.lat,
+                currentLocation.lng,
+                "AIzaSyDWGVK2rNh4jyBbR8lsFbrfYqymI84Kzt0"
+            )
+            .then((address) => setInputValue(address))
+            .catch((error) => console.error("Error getting address:", error));
+        }
+
+    }, [currentLocation]);
 
     const onLoad = React.useCallback(function callback(map) {
         setMap(map);
@@ -48,7 +75,14 @@ function IcanHelp() {
     return isLoaded ? (
         <div className="split-container">
             <div className="resizable left-panel">
-                <div className="leftPanelHeader">User's Request</div>
+                <div className="leftPanelHeader">
+                    <div>
+                        <input type="text" className="mapInput" value={inputValue} readOnly/>
+                    </div>
+                    <div>
+                        <input type="text" className="mapInput" placeholder="Designated Location" />
+                    </div>
+                </div>
                 <div className="needHelpDetail">123</div>
                 <div className="needHelpDetail">123</div>
                 <div className="needHelpDetail">123</div>
@@ -82,6 +116,6 @@ function IcanHelp() {
             </div>
         </div>
     ) : <></>
-} 
-
+}
+ 
 export default IcanHelp; 
