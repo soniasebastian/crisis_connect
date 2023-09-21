@@ -1,0 +1,23 @@
+.split-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.left-panel {
+    flex: 1;
+    background-color: #f0f0f0;
+    /* Adjust the background color as needed */
+}
+
+.right-panel {
+    flex: 2;
+    background-color: #e0e0e0;
+    /* Adjust the background color as needed */
+}
+
+/* Ensure the map takes up the full height of the right panel */
+#google-map {
+    width: 100%;
+    height: 100%;
+}

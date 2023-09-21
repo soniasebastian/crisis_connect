@@ -1,7 +1,7 @@
 export default function Header () {
     return(
-        <div>
-            
-        </div>
+      <header>
+          <p>Crisis Connect</p>
+      </header>
     )
 }
