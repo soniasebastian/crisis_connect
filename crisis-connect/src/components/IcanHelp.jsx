@@ -3,11 +3,18 @@ import "./IcanHelp.css";
 
 export default function IcanHelp() {
     return (
-        <div className="split-container">
-            <div className="left-panel">123</div>
-            <div className="right-panel">
+        <>
+            <div className="split-container">
+                <div className="left-panel">
+                    123
+                </div>
 
+
+
+                <div iv className="right-panel">
+                    456
                 </div>
             </div>
-            );
+        </>
+    )
 }
