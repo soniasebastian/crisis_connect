@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom'
+
 export default function Header () {
     return(
       <header>
-          <p>Crisis Connect</p>
+          <Link to='/'><p>Crisis Connect</p></Link>
       </header>
     )
 }

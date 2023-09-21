@@ -48,3 +48,39 @@ body{
 }
 
 
+/* userInfo page */
+.userInfo {
+  background-color: #578868;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+section{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  flex-wrap: wrap;
+  width: 20rem;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.userInfo p{
+  font-size: 1.2rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#3e614b
+}
+.userInfo h2{
+  display: flex;
+  justify-content: center;
+}
+
+
+
