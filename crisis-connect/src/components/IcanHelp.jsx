@@ -184,6 +184,7 @@ function IcanHelp() {
                     <li>Name: Paul</li>
                     <li>Need: fruit, Synthroid, Menswear, Hammers</li>
                     <li>Address: 123 Eglinton Ave E, Toronto, ON M4P 1J2</li>
+                    <li>Phone number : 647-853-9551</li>
                 </div>
                 <div className="needHelpDetail">Empty</div>
                 <div className="needHelpDetail">Empty</div>

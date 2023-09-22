@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {useLocation} from "react-router-dom";
 import './UserInfoForm.css';
+import { Link } from 'react-router-dom';
 
 function UserInfoForm ({ helpRequest })  {
     const location = useLocation();
@@ -46,7 +47,7 @@ function UserInfoForm ({ helpRequest })  {
                     </div>
 
                     <div className="button-container">
-                        <button type="submit" >Submit</button>
+                        <Link to="/icanhelp"><button type="submit" >Submit</button></Link>
                     </div>
                 </form>
             </div>
