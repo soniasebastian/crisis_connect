@@ -70,8 +70,7 @@ function IneedHelp() {
     };
 
     return (
-        <div>
-            <h2>I need Help</h2>
+        <div className='background'>
             <form onSubmit={handleSubmit}>
             <div className="navbar-container">
                 <ul className="nav">
@@ -157,7 +156,7 @@ function IneedHelp() {
                         </label>
                     ))}
                 </div></div>}
-                <button type="submit">Submit</button>
+                <button type="submit" >Next</button>
             </div>
             </form>
         </div>
