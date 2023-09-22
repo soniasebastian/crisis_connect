@@ -1,3 +1,13 @@
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: #578868;
+    height: 100vh;
+}
+
 /* Style the navigation bar */
 .navbar-container {
     text-align: center;
@@ -84,4 +94,10 @@ ul {
 
 li {
     margin: 5px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    align-items: center;
+    text-align: center;
 }
